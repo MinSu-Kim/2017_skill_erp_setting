@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JOptionPane;
+
 import erp_setting.Config;
 import erp_setting.dao.DataBaseDao;
 import erp_setting.dao.TableDao;
@@ -20,6 +22,7 @@ public class ImportSettingService implements ServiceInterface{
 			executeImportData(String.format("LOAD DATA LOCAL INFILE '%s' INTO TABLE %s character set 'UTF8' fields TERMINATED by ','", Config.getFilePath(tableName), tableName), tableName);
 		}
 		TableDao.getInstance().setForeignKeyCheck(1);	
+		JOptionPane.showMessageDialog(null, "ERP 데이터베이스 복원 완료~!");
 	}
 
 	protected static void executeImportData(String sql, String tableName) {

@@ -17,6 +17,7 @@ public class InitSettingService implements ServiceInterface{
 		createUser(); 		// 해당 데이터베이스 사용자 추가
 //		new ImportSettingService().new LoadPost().start();
 		loadPost();
+		JOptionPane.showMessageDialog(null, "ERP 데이터베이스 초기화 완료~!");
 	}
 
 	private void createDataBase() {
@@ -45,7 +46,6 @@ public class InitSettingService implements ServiceInterface{
 			ImportSettingService.executeImportData(String.format(sql,f.getAbsolutePath().replace("\\", "/")), f.getName());
 		}
 
-		JOptionPane.showMessageDialog(null, "우편번호 Load Complete~!");
 	}
 
 }

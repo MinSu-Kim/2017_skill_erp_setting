@@ -24,7 +24,7 @@ public class Config {
 			"CREATE TABLE title ("
 			+ "titleno INT(11) NOT NULL,	"
 			+ "titlename VARCHAR(20) NOT NULL, "
-			+ "PRIMARY KEY (no))";
+			+ "PRIMARY KEY (titleno))";
 	
 	private static final String CREATE_SQL_DEPT=
 			"CREATE TABLE department (	"
@@ -51,7 +51,7 @@ public class Config {
 			+ "PRIMARY key (empno),	"
 			+ "FOREIGN KEY (dno) REFERENCES department (deptno), "
 			+ "FOREIGN KEY (manager) REFERENCES employee (empno), "
-			+ "FOREIGN KEY (title) REFERENCES title (no))";
+			+ "FOREIGN KEY (title) REFERENCES title (titleno))";
 	
 	private static final String CREATE_SQL_POST=
 			"CREATE TABLE post ("

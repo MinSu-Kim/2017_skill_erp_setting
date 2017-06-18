@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JOptionPane;
+
 import erp_setting.Config;
 import erp_setting.dao.DataBaseDao;
 import erp_setting.jdbc.DBCon;
@@ -25,6 +27,7 @@ public class ExportSettingService implements ServiceInterface{
 		for(String tableName : Config.EXPORT_TABLE_NAME){
 			executeExportData(sql, tableName);
 		}		
+		JOptionPane.showMessageDialog(null, "ERP 데이터베이스 백업 완료~!");
 	}
 	
 	private void checkBackupDir() {
