@@ -36,21 +36,14 @@ public class Config {
 	private static final String CREATE_SQL_EMP=
 			"CREATE TABLE employee ("
 			+ "empno   INT(11)     NOT NULL, "
-			+ "pass    CHAR(41)    NOT NULL, "
 			+ "empname VARCHAR(20) NOT NULL, "
 			+ "title   INT(11)     NULL, "
-			+ "manager INT(11)     NULL, "
 			+ "salary  INT(11)     NULL, "
 			+ "dno     INT(11)     NULL, "
 			+ "post      CHAR(5)      NULL,	"
 			+ "address   VARCHAR(120) NULL,	"
-			+ "addr_etc  VARCHAR(40)  NULL,	"
-			+ "dependent BOOL         NULL,	"
-			+ "married   BOOL         NULL, "
-			+ "pic       blob         NULL, "
 			+ "PRIMARY key (empno),	"
 			+ "FOREIGN KEY (dno) REFERENCES department (deptno), "
-			+ "FOREIGN KEY (manager) REFERENCES employee (empno), "
 			+ "FOREIGN KEY (title) REFERENCES title (titleno))";
 	
 	private static final String CREATE_SQL_POST=
