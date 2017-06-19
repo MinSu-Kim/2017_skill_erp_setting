@@ -66,7 +66,7 @@ public class ExportSettingService implements ServiceInterface{
 				}
 				sb.replace(sb.length() - 1, sb.length(), ""); // 마지막라인 [,] 제거
 				
-				sb.append("\r\n");
+				sb.append("\n");
 				lineCount++;
 			}
 
