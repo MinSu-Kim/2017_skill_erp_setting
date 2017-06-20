@@ -8,3 +8,9 @@ select password('1234'), length(password('1234')) from dual;
 
 
 select password('1234'), pass, if (password('1234')=pass, "참", "거짓") from employee where empno=1003;
+
+select count(*) from employee where dno=1;
+
+select count(*) from employee where title=1;
+
+select count(*) from employee where title=1;
