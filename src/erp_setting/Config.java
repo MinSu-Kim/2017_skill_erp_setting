@@ -42,6 +42,7 @@ public class Config {
 			+ "dno     INT(11)     NULL, "
 			+ "post      CHAR(5)      NULL,	"
 			+ "address   VARCHAR(120) NULL,	"
+			+ "pic       longblob,"
 			+ "PRIMARY key (empno),	"
 			+ "FOREIGN KEY (dno) REFERENCES department (deptno), "
 			+ "FOREIGN KEY (title) REFERENCES title (titleno))";

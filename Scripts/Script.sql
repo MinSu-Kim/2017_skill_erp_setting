@@ -14,3 +14,7 @@ select count(*) from employee where dno=1;
 select count(*) from employee where title=1;
 
 select count(*) from employee where title=1;
+
+select pic from employee;
+
+SELECT HEX(pic) FROM employee;
