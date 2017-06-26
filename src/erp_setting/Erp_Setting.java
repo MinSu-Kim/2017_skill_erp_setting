@@ -2,9 +2,7 @@ package erp_setting;
 
 import java.awt.EventQueue;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import erp_setting.service.InitSettingService;
 
