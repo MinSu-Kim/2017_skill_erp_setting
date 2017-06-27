@@ -15,6 +15,7 @@ select count(*) from employee where title=1;
 
 select count(*) from employee where title=1;
 
-select pic from employee;
+select left(pic,8) from employee; where empno=1003;;
 
-SELECT HEX(pic) FROM employee;
+update employee set pic=load_file('D:\worksapce-skill2017\Skill_Erp_Application\DataFiles\img\gongu.jpg') where empno=1003;
+
